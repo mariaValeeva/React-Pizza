@@ -3,12 +3,14 @@ import React from "react";
 
 function PizzaBlock ({title, price, imageUrl, sizes, types}) {
 
-    const typesNames =["тонкое","традиционное"]
+    const typesNames = ["тонкое", "традиционное"];
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(0);
     
 
     return (
+   
+      <div className="pizza-block-wrapper">
         <div className="pizza-block">
         <img
         className="pizza-block__image"
@@ -52,6 +54,9 @@ function PizzaBlock ({title, price, imageUrl, sizes, types}) {
         </div>
       </div>
     </div> 
+      </div>
+     
+        
     )
 }
 
