@@ -1,0 +1,33 @@
+.root {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 16px;
+  position: relative;
+  left: -80px;
+}
+.root .input {
+  border: none;
+  padding-left: 25px;
+}
+.root .icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  opacity: 0.3;
+  left: 15px;
+  top: 13px;
+}
+.root .clearIcon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  opacity: 0.3;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.root .clearIcon:hover {
+  opacity: 1;
+}/*# sourceMappingURL=search.module.css.map */
