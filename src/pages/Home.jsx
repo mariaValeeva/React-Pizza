@@ -8,8 +8,11 @@ import PizzaBlock from '../components/PizzaBlock';
 import Skeleton from '../components/PizzaBlock/Skeleton';
 import Pagination from '../components/Pagination';
 
-const Home = ({searchValue}) => {
+import { SearchContext } from '../App';
 
+const Home = () => {
+
+    const {searchValue} = React.useContext(SearchContext)
     const [items, setItems] = React.useState([]); //все пиццы с бэкенда
     const [isLoading, setIsLoading] = React.useState(true); //загрузка страницы скелетон-пиццаБлок
     const [categoryId, setCategoryId] = React.useState(0); // state с Categories перенесли сюда, чтобы фильтровать данные с бэкенда
@@ -24,6 +27,7 @@ const Home = ({searchValue}) => {
     const pizzas = items.map((obj)=> (<PizzaBlock key={obj.id} {...obj}/>))
 
     const search = searchValue ? `search=${searchValue}` : ''
+    
   
 
 
